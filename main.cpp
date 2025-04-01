@@ -1,58 +1,8 @@
-/*
- * Suffix Array Construction (Naive Approach)
- * 
- * This program constructs the suffix array of a given string using 
- * a naive sorting-based approach. It appends a '$' sentinel character 
- * to the end of the string to mark its termination. The suffixes are 
- * generated, sorted lexicographically, and their original indices are returned.
- *
- * Author: [Francisco Vaquera]
- * Date: [31/03/2025]
- */
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
-using namespace std;  
-
-
-vector<int> suffixArrayNaive(string S) {
-    int n = S.length() + 1;
-    vector<string> sa;
-    vector<int> A(n);
-    S = S + "$";
-
-    for (int i = 0; i < n; i++)
-        sa.push_back(S.substr(i));
-
-    sort(sa.begin(), sa.end());
-
-
-    for (int i = 0; i < n; i++)
-        A[i] = n - sa[i].size() + 1;
-
-    return A;
-}
-
-int main() {
-    string text;
-    getline(cin, text);
-
-    vector<int> suffixArray = suffixArrayNaive(text);
-
-    for (int index : suffixArray) {
-        cout << index << endl;
-    }
-
-    return 0;
-}
-
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-using namespace std;  
+using namespace std;
 
 
 vector<int> suffixArrayNaive(string S) {
