@@ -22,7 +22,7 @@
 using namespace std;
 
 
-vector<int> suffixArrayNaive(string S) {
+vector<int> suffix_array_naive(string S) {
     int n = S.length() + 1;
     vector<string> sa;
     vector<int> A(n);
@@ -44,7 +44,7 @@ int main() {
     string text;
     getline(cin, text);
 
-    vector<int> suffixArray = suffixArrayNaive(text);
+   vector<int> suffixArray = suffix_array_naive(text);
 
     for (int index : suffixArray) {
         cout << index << endl;
