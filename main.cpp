@@ -1,3 +1,6 @@
+/*
+Actividad 2.2 A01234377
+*/
 #include <iostream>
 #include <vector>
 #include <algorithm>
