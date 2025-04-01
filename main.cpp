@@ -1,3 +1,4 @@
+
 /*
  * File: main.cpp
  * SonarQube, open source software quality management tool.
